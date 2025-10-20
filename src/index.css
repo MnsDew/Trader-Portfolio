@@ -42,6 +42,11 @@ All colors MUST be HSL.
     --trading-gold: 36 65% 55%;
     --trading-black: 0 0% 5%;
     
+    /* Forex trading colors */
+    --forex-profit: 120 60% 50%;  /* Green for profit */
+    --forex-loss: 0 75% 60%;      /* Red for loss */
+    --forex-neutral: 210 10% 60%; /* Blue for neutral */
+    
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 95%) 0%, hsl(0 0% 100%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(36 65% 55%) 0%, hsl(32 60% 48%) 100%);
@@ -57,43 +62,49 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 36 50% 65%;
+    /* Luxury Modern Black Theme - Premium feel */
+    --background: 0 0% 2%;        /* Ultra-deep black */
+    --foreground: 0 0% 95%;       /* Pure white text */
 
-    --card: 0 0% 8%;
-    --card-foreground: 36 50% 65%;
+    --card: 0 0% 4%;              /* Slightly lighter black for cards */
+    --card-foreground: 0 0% 95%;  /* White text on cards */
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 36 50% 65%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 36 65% 55%;
+    --primary: 36 65% 55%;        /* Keep gold primary */
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 36 50% 65%;
+    --secondary: 0 0% 6%;         /* Subtle secondary */
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 36 30% 60%;
+    --muted: 0 0% 8%;             /* Muted background */
+    --muted-foreground: 0 0% 65%; /* Muted text */
 
-    --accent: 36 65% 55%;
+    --accent: 36 65% 55%;         /* Gold accent */
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 45 100% 51%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 0 0% 12%;           /* Subtle borders */
+    --input: 0 0% 8%;             /* Input backgrounds */
     --ring: 45 100% 51%;
     
-    /* Dark mode gradients - Pure Black & Soft Gold */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 100%);
+    /* Luxury gradients - Deep black with gold accents */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 1%) 0%, hsl(0 0% 3%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(36 65% 55%) 0%, hsl(32 60% 48%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 100%);
     
-    /* Dark mode shadows - Softer gold glow */
-    --shadow-gold: 0 10px 50px hsla(36, 65%, 55%, 0.3);
-    --shadow-card: 0 4px 25px hsla(36, 65%, 55%, 0.08);
-    --shadow-premium: 0 20px 70px hsla(36, 65%, 55%, 0.2);
+    /* Enhanced shadows for luxury feel */
+    --shadow-gold: 0 10px 50px hsla(36, 65%, 55%, 0.4);
+    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.6);
+    --shadow-premium: 0 20px 80px hsla(36, 65%, 55%, 0.3);
+    
+    /* Enhanced forex colors for dark theme */
+    --forex-profit: 120 60% 50%;  /* Brighter green for better contrast */
+    --forex-loss: 0 75% 60%;      /* Brighter red for better contrast */
+    --forex-neutral: 210 20% 60%; /* Brighter blue for better contrast */
   }
 }
 
@@ -232,4 +243,62 @@ All colors MUST be HSL.
     transform: scaleX(1);
     transform-origin: left;
   }
+  
+  /* Forex trading colors */
+  .text-forex-profit {
+    color: hsl(var(--forex-profit));
+  }
+  
+  .text-forex-loss {
+    color: hsl(var(--forex-loss));
+  }
+  
+  .text-forex-neutral {
+    color: hsl(var(--forex-neutral));
+  }
+  
+  .bg-forex-profit {
+    background-color: hsl(var(--forex-profit));
+  }
+  
+  .bg-forex-loss {
+    background-color: hsl(var(--forex-loss));
+  }
+  
+  .bg-forex-neutral {
+    background-color: hsl(var(--forex-neutral));
+  }
+  
+  .border-forex-profit {
+    border-color: hsl(var(--forex-profit));
+  }
+  
+  .border-forex-loss {
+    border-color: hsl(var(--forex-loss));
+  }
+}
+
+/* Mobile viewport fixes */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  overflow-x: hidden;
+}
+
+/* Fix for iOS Safari address bar issues */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Use custom viewport height for mobile */
+.min-h-screen {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }

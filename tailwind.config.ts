@@ -51,6 +51,11 @@ export default {
           gold: "hsl(var(--trading-gold))",
           black: "hsl(var(--trading-black))",
         },
+        forex: {
+          profit: "hsl(var(--forex-profit))",
+          loss: "hsl(var(--forex-loss))",
+          neutral: "hsl(var(--forex-neutral))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,8 +84,8 @@ export default {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 25px hsl(var(--primary) / 0.2)" },
+          "50%": { boxShadow: "0 0 60px hsl(var(--primary) / 0.4)" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0)" },
@@ -93,7 +98,7 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "fade-in-down": "fade-in-down 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
-        "glow": "glow 2s ease-in-out infinite",
+        "glow": "glow 4s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
       },
       backgroundImage: {

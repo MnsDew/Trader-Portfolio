@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
+import { TrendingUp, Users, DollarSign, Target } from 'lucide-react';
 import gsap from 'gsap';
 
 export const StatsSection = () => {
@@ -10,10 +11,10 @@ export const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { value: 5, suffix: '+', label: 'stats.experience' },
-    { value: 200, suffix: 'K+', label: 'stats.community' },
-    { value: 1.2, suffix: 'M', label: 'stats.volume', prefix: '$' },
-    { value: 87, suffix: '%', label: 'stats.accuracy' },
+    { value: 5, suffix: '+', labelKey: 'stats.experience', icon: TrendingUp, color: 'text-forex-profit' },
+    { value: 200, suffix: 'K+', labelKey: 'stats.community', icon: Users, color: 'text-forex-neutral' },
+    { value: 1.2, suffix: 'M', labelKey: 'stats.volume', prefix: '$', icon: DollarSign, color: 'text-gradient-gold' },
+    { value: 87, suffix: '%', labelKey: 'stats.accuracy', icon: Target, color: 'text-forex-profit' },
   ];
 
   useEffect(() => {
@@ -39,21 +40,27 @@ export const StatsSection = () => {
     <section ref={ref} className="py-20 bg-background">
       <div ref={sectionRef} className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="stat-card premium-card p-8 rounded-lg text-center"
-              style={{ opacity: inView ? 1 : 0.8 }}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
-                {stat.prefix}
-                {inView && <CountUp end={stat.value} duration={2.5} decimals={stat.value % 1 !== 0 ? 1 : 0} />}
-                {!inView && stat.value}
-                {stat.suffix}
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <div 
+                key={index} 
+                className="stat-card premium-card p-8 rounded-lg text-center group hover:scale-105 transition-transform duration-300"
+                style={{ opacity: inView ? 1 : 0.8 }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-2 h-2 bg-forex-profit rounded-full"></div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
+                  {stat.prefix}
+                  {inView && <CountUp end={stat.value} duration={2.5} decimals={stat.value % 1 !== 0 ? 1 : 0} />}
+                  {!inView && stat.value}
+                  {stat.suffix}
+                </div>
+                <div className="text-foreground text-sm md:text-base font-medium">{t(stat.labelKey)}</div>
               </div>
-              <div className="text-muted-foreground text-sm md:text-base">{t(stat.label)}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

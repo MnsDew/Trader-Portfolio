@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Instagram, Send, Youtube, Twitter } from 'lucide-react';
+import { Instagram, Send, Youtube, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,7 +81,25 @@ export const ContactSection = () => {
             </Button>
           </form>
           
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-center space-y-8">
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <a href="mailto:Gourmetmeal9@gmail.com" className="text-sm md:text-base">
+                    Gourmetmeal9@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-sm md:text-base">Global Trading Services</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground">{t('footer.follow')}</h3>
               <div className="flex gap-4">

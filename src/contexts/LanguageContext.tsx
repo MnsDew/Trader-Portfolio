@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useRouteLanguage } from '@/components/LanguageRoute';
 
 type Language = 'en' | 'ar';
 
@@ -11,15 +12,15 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Hero
-    'hero.title': 'Hello, I am Aboudy',
-    'hero.subtitle': 'Professional Forex Trader | MT4 & MT5 Expert | +5 Years Experience',
-    'hero.description': 'Helping traders achieve consistent profits through proven strategies and expert guidance',
+    'hero.title': ' Hello! I\'m Aboudi, a Professional Forex Trader',
+    'hero.subtitle': 'I\'ll guide you step by step to trade in a practical, real-world way',
+    'hero.description': 'Want to learn scalping, account management, and market strategies? Here you\'ll gain the skills to trade with confidence and professionalism',
     'hero.cta1': 'Watch My Trades',
     'hero.cta2': 'Join Telegram',
     
     // About
     'about.title': 'About Me',
-    'about.description': 'With over 5 years of experience in Forex trading, I specialize in scalping and swing trading strategies on MT4 and MT5 platforms. My journey started with a passion for financial markets, and today I help thousands of traders worldwide achieve their financial goals.',
+    'about.description': 'With over 5 years of experience in Forex trading, I specialize in scalping and swing trading strategies on MT4 and MT5 platforms. My journey started with a passion for financial markets, and today I help thousands of traders worldwide achieve their financial goals. I focus on accurate analysis, discipline, and achieving tangible results.',
     
     // Journey
     'journey.title': 'Trading Journey',
@@ -33,10 +34,10 @@ const translations = {
     'journey.milestone4.desc': 'Built a community of 200K+ traders',
     
     // Stats
-    'stats.experience': 'Years Experience',
-    'stats.community': 'Community Members',
-    'stats.volume': 'Trading Volume',
-    'stats.accuracy': 'Signal Accuracy',
+    'stats.experience': 'Years Experience +5',
+    'stats.community': '200K+ Community',
+    'stats.volume': 'Trading Volume $1.2M',
+    'stats.accuracy': 'Accuracy Rate 87%',
     
     // Services
     'services.title': 'Services & Mentorship',
@@ -62,26 +63,55 @@ const translations = {
     
     // Footer
     'footer.follow': 'Follow Me',
-    'footer.rights': '© 2025 Created by MANSOOR | MnsDew. All rights reserved.',
+    'footer.rights': 'All rights reserved',
+    'footer.owner': 'Aboudy',
+    'footer.created': 'Created & Designed & Developed by',
+    'footer.developer': 'MANSOOR GABALI',
+    'footer.contact': 'Contact Me',
+    
+    // Trading Expertise
+    'expertise.risk.title': 'Risk Management',
+    'expertise.risk.desc': 'Strategic position sizing and stop-loss placement to protect capital and maximize returns',
+    'expertise.psychology.title': 'Trading Psychology',
+    'expertise.psychology.desc': 'Disciplined approach to risk management and emotional control for consistent profitability',
+    'expertise.mt4.title': 'MT4 & MT5 Mastery',
+    'expertise.mt4.desc': 'Professional trading using MetaTrader platforms with custom indicators and automated strategies',
+    'expertise.technical.title': 'Technical Analysis',
+    'expertise.technical.desc': 'Expert in chart patterns, indicators, and price action strategies for optimal entry and exit points',
+    
+    // Live Charts
+    'charts.title': 'Live Forex Charts',
+    'charts.description': 'Real-time market data and professional TradingView charts to help you make informed trading decisions. All charts display live market prices and movements.',
+    'charts.live_indicator': 'Live Market Data',
+    'charts.chart_title': 'Live TradingView Chart',
+    'charts.live_data': 'Live Data',
+    'charts.disclaimer': 'Trading involves risk. Past performance is not indicative of future results. Always do your own research and consider your risk tolerance before trading.',
+    
+    // About Highlights
+    'about.mt4': 'MT4 & MT5 Expert',
+    'about.experience': 'Years Experience +5',
+    'about.accuracy': 'Accuracy Rate 87%',
+    'about.community': '200K+ Community',
     
     // Navigation
     'nav.about': 'About',
     'nav.journey': 'Journey',
     'nav.services': 'Services',
+    'nav.charts': 'Charts',
     'nav.gallery': 'Gallery',
     'nav.contact': 'Contact',
   },
   ar: {
     // Hero
-    'hero.title': ' مرحبا ! انا عبودي',
-    'hero.subtitle': 'محترف تداول فوركس | خبير MT4 و MT5 | +5 سنوات خبرة',
-    'hero.description': 'مساعدة المتداولين على تحقيق أرباح ثابتة من خلال استراتيجيات مثبتة وتوجيه خبير',
+    'hero.title': 'مرحبا! أنا عبودي، متداول محترف بخبرة عملية',
+    'hero.subtitle': 'رح أعلمك كيف تتداول خطوة بخطوة بطريقة عملية وواقعية',
+    'hero.description': 'بدك تتعلم السكالبينج، إدارة الحسابات واستراتيجيات السوق؟ هون رح تحصل على المهارات اللي تخليك تتداول بثقة واحترافية',
     'hero.cta1': 'شاهد صفقاتي',
     'hero.cta2': 'انضم للتيليجرام',
     
     // About
     'about.title': 'عني',
-    'about.description': 'مع أكثر من 5 سنوات من الخبرة في تداول الفوركس، أتخصص في استراتيجيات السكالبينج والتداول المتأرجح على منصات MT4 و MT5. بدأت رحلتي بشغف للأسواق المالية، واليوم أساعد الآلاف من المتداولين حول العالم على تحقيق أهدافهم المالية.',
+    'about.description': 'مع أكثر من 5 سنوات من الخبرة في تداول الفوركس، أتخصص في استراتيجيات السكالبينج والتداول المتأرجح على منصات MT4 و MT5. بدأت رحلتي بشغف للأسواق المالية، واليوم أساعد الآلاف من المتداولين حول العالم على تحقيق أهدافهم المالية. تركيزنا رح يكون على التحليل الدقيق، الانضباط، وتحقيق نتائج ملموسة.',
     
     // Journey
     'journey.title': 'رحلة التداول',
@@ -95,10 +125,10 @@ const translations = {
     'journey.milestone4.desc': 'بناء مجتمع من +200 ألف متداول',
     
     // Stats
-    'stats.experience': 'سنوات الخبرة',
-    'stats.community': 'أعضاء المجتمع',
-    'stats.volume': 'حجم التداول',
-    'stats.accuracy': 'دقة الإشارات',
+    'stats.experience': 'سنوات الخبرة +5',
+    'stats.community': 'متابعون +200 ألف',
+    'stats.volume': 'حجم التداول 1.2 مليون دولار',
+    'stats.accuracy': 'معدل الدقة 87%',
     
     // Services
     'services.title': 'الخدمات والإرشاد',
@@ -124,12 +154,41 @@ const translations = {
     
     // Footer
     'footer.follow': 'تابعني',
-    'footer.rights': '© 2025 تم الإنشاء بواسطة منصور | MnsDew. جميع الحقوق محفوظة.',
+    'footer.rights': 'جميع الحقوق محفوظة',
+    'footer.owner': 'عبودي',
+    'footer.created': 'تم الإنشاء والتصميم والتطوير بواسطة',
+    'footer.developer': 'مُ . منصور جبلي',
+    'footer.contact': 'تواصل معي',
+    
+    // Trading Expertise
+    'expertise.risk.title': 'إدارة المخاطر',
+    'expertise.risk.desc': 'حجم المراكز الاستراتيجي ووضع وقف الخسارة لحماية رأس المال وتعظيم العوائد',
+    'expertise.psychology.title': 'الانضباط في التداول',
+    'expertise.psychology.desc': 'نهج منضبط لإدارة المخاطر والتحكم العاطفي لتحقيق ربحية ثابتة',
+    'expertise.mt4.title': 'إتقان MT4 و MT5',
+    'expertise.mt4.desc': 'التداول الاحترافي باستخدام منصات MetaTrader مع المؤشرات المخصصة والاستراتيجيات الآلية',
+    'expertise.technical.title': 'التحليل الفني',
+    'expertise.technical.desc': 'خبير في أنماط الرسوم البيانية والمؤشرات واستراتيجيات حركة الأسعار للنقاط المثلى للدخول والخروج',
+    
+    // Live Charts
+    'charts.title': 'رسوم بيانية مباشرة للفوركس',
+    'charts.description': 'بيانات السوق في الوقت الفعلي والرسوم البيانية الاحترافية من TradingView لمساعدتك في اتخاذ قرارات تداول مدروسة. جميع الرسوم تعرض أسعار السوق المباشرة والحركات.',
+    'charts.live_indicator': 'بيانات السوق المباشرة',
+    'charts.chart_title': 'رسم بياني مباشر من TradingView',
+    'charts.live_data': 'بيانات مباشرة',
+    'charts.disclaimer': 'التداول ينطوي على مخاطر. الأداء السابق لا يشير إلى النتائج المستقبلية. قم دائماً بأبحاثك الخاصة واعتبر تحملك للمخاطر قبل التداول.',
+    
+    // About Highlights
+    'about.mt4': 'خبير MT4 و MT5',
+    'about.experience': 'سنوات الخبرة +5',
+    'about.accuracy': 'معدل الدقة 87%',
+    'about.community': 'متابعون +200 ألف',
     
     // Navigation
     'nav.about': 'عني',
     'nav.journey': 'الرحلة',
     'nav.services': 'الخدمات',
+    'nav.charts': 'الرسوم البيانية',
     'nav.gallery': 'المعرض',
     'nav.contact': 'تواصل',
   },
@@ -138,12 +197,21 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const routeLanguage = useRouteLanguage();
+  const [language, setLanguage] = useState<Language>(routeLanguage);
+
+  useEffect(() => {
+    setLanguage(routeLanguage);
+  }, [routeLanguage]);
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'en' ? 'ar' : 'en'));
-    document.documentElement.dir = language === 'en' ? 'rtl' : 'ltr';
-    document.documentElement.lang = language === 'en' ? 'ar' : 'en';
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+    setLanguage(newLanguage);
+    
+    // Update URL
+    window.history.pushState(null, '', `/${newLanguage}`);
+    // Reload to apply new route
+    window.location.reload();
   };
 
   const t = (key: string): string => {
