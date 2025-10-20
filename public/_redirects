@@ -1,6 +1,1 @@
-# Redirect all routes to index.html for SPA routing
 /*    /index.html   200
-
-# Specific routes for language switching
-/ar    /index.html   200
-/en    /index.html   200
