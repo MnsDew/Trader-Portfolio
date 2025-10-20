@@ -1,4 +1,11 @@
-Options -MultiViews
 RewriteEngine On
+RewriteBase /
+
+# Handle language routes
+RewriteRule ^ar/?$ /index.html [L]
+RewriteRule ^en/?$ /index.html [L]
+
+# Handle all other routes
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
