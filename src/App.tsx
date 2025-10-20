@@ -17,6 +17,13 @@ const App = () => {
     // Fix mobile viewport issues
     fixInitialMobileLoad();
     fixMobileViewport();
+    
+    // Handle initial language from server-side rendering
+    const initialLanguage = (window as any).__INITIAL_LANGUAGE__;
+    if (initialLanguage && initialLanguage !== window.location.pathname.substring(1)) {
+      // Redirect to the correct language route
+      window.location.replace(`/${initialLanguage}`);
+    }
   }, []);
 
   return (

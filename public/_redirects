@@ -1,6 +1,6 @@
-# Handle language routes
-/ar    /index.html   200
-/en    /index.html   200
+# Handle language routes - point to specific HTML files
+/ar    /ar.html   200
+/en    /en.html   200
 
 # Handle all other routes
 /*    /index.html   200
