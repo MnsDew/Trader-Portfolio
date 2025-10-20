@@ -85,7 +85,7 @@ const translations = {
     'charts.live_indicator': 'Live Market Data',
     'charts.chart_title': 'Live TradingView Chart',
     'charts.live_data': 'Live Data',
-    'charts.disclaimer': 'Trading involves risk. Past performance is not indicative of future results. Always do your own research and consider your risk tolerance before trading.',
+    'charts.disclaimer': 'Trading involves high risk and may result in loss of capital. Past performance does not guarantee future results. Always conduct your own research and consider your risk tolerance before making any investment decisions. Consult a financial advisor if necessary.',
     
     // About Highlights
     'about.mt4': 'MT4 & MT5 Expert',
@@ -176,7 +176,7 @@ const translations = {
     'charts.live_indicator': 'بيانات السوق المباشرة',
     'charts.chart_title': 'رسم بياني مباشر من TradingView',
     'charts.live_data': 'بيانات مباشرة',
-    'charts.disclaimer': 'التداول ينطوي على مخاطر. الأداء السابق لا يشير إلى النتائج المستقبلية. قم دائماً بأبحاثك الخاصة واعتبر تحملك للمخاطر قبل التداول.',
+    'charts.disclaimer': 'التداول ينطوي على مخاطر عالية وقد يؤدي إلى خسارة رأس المال. الأداء السابق لا يضمن النتائج المستقبلية. قم دائماً بأبحاثك الخاصة واعتبر تحملك للمخاطر قبل اتخاذ أي قرارات استثمارية. استشر مستشاراً مالياً إذا لزم الأمر.',
     
     // About Highlights
     'about.mt4': 'خبير MT4 و MT5',

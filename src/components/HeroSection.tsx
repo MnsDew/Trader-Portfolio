@@ -6,7 +6,7 @@ import { ChartBackground } from './ChartBackground';
 import gsap from 'gsap';
 
 export const HeroSection = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -66,12 +66,12 @@ export const HeroSection = () => {
         
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
           <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg group shadow-gold">
-            <Play className={`h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+            <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform" />
             {t('hero.cta1')}
           </Button>
           <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg group">
             {t('hero.cta2')}
-            <ArrowRight className={`h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform ${language === 'ar' ? 'mr-2' : 'ml-2'}`} />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

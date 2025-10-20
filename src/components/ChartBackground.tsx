@@ -290,7 +290,8 @@ export const ChartBackground = () => {
         theme === 'dark' ? 'opacity-25' : 'opacity-35'
       }`}
       style={{ 
-        mixBlendMode: theme === 'dark' ? 'screen' : 'multiply'
+        mixBlendMode: theme === 'dark' ? 'screen' : 'multiply',
+        touchAction: 'none'
       }}
     />
   );

@@ -37,3 +37,4 @@ export const fixInitialMobileLoad = () => {
   // Add a class to body to indicate mobile viewport is fixed
   document.body.classList.add('viewport-fixed');
 };
+
