@@ -7,16 +7,28 @@ export const Footer = () => {
   const message = encodeURIComponent("Hello Mansoor! I browsed your forex website and I want to hire you as a developer. Can you help me build a similar professional trading website?");
   const waLink = `https://wa.me/905354477762?text=${message}`;
 
+  const scrollToHero = () => {
+    const element = document.getElementById('hero');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-br from-background via-card to-muted/20 border-t border-border py-8 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center space-y-4">
-          {/* Email Contact */}
-          <div className="flex items-center justify-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-            <Mail className="w-4 h-4 text-primary" />
-            <a href="mailto:Gourmetmeal9@gmail.com" className="text-sm">
-              Gourmetmeal9@gmail.com
-            </a>
+          {/* Logo */}
+          <div 
+            className="flex items-center justify-center gap-2 mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={scrollToHero}
+          >
+            <img 
+              src="/no-bg-gold.png" 
+              alt="Aboudy - Professional Forex Trader" 
+              className="h-24 w-24 object-contain"
+            />
+            {/* <span className="text-lg font-bold text-gradient-gold">Aboudy</span> */}
           </div>
 
           {/* Rights Reserved - Website Owner */}

@@ -176,7 +176,7 @@ export const LiveChartsSection = () => {
         {/* Disclaimer */}
         <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-muted/50 rounded-lg">
           <p className="text-xs sm:text-sm text-muted-foreground text-center leading-relaxed">
-            <strong>Disclaimer:</strong> {t('charts.disclaimer')}
+            <strong>{t('charts.disclaimer_label')}</strong> {t('charts.disclaimer')}
           </p>
         </div>
       </div>

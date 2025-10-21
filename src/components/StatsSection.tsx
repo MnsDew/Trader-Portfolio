@@ -11,7 +11,7 @@ export const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { value: 5, suffix: '+', labelKey: 'stats.experience', icon: TrendingUp, color: 'text-forex-profit' },
+    { value: 3, suffix: '+', labelKey: 'stats.experience', icon: TrendingUp, color: 'text-forex-profit' },
     { value: 200, suffix: 'K+', labelKey: 'stats.community', icon: Users, color: 'text-forex-neutral' },
     { value: 1.2, suffix: 'M', labelKey: 'stats.volume', prefix: '$', icon: DollarSign, color: 'text-gradient-gold' },
     { value: 87, suffix: '%', labelKey: 'stats.accuracy', icon: Target, color: 'text-forex-profit' },
@@ -49,7 +49,9 @@ export const StatsSection = () => {
                 style={{ opacity: inView ? 1 : 0.8 }}
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-2 h-2 bg-forex-profit rounded-full"></div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
                 </div>
                 <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
                   {stat.prefix}

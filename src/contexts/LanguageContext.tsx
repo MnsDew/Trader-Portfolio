@@ -20,21 +20,23 @@ const translations = {
     
     // About
     'about.title': 'About Me',
-    'about.description': 'With over 5 years of experience in Forex trading, I specialize in scalping and swing trading strategies on MT4 and MT5 platforms. My journey started with a passion for financial markets, and today I help thousands of traders worldwide achieve their financial goals. I focus on accurate analysis, discipline, and achieving tangible results.',
+    'about.description': 'With over 3 years of experience in Forex trading, I specialize in scalping and swing trading strategies on MT4 and MT5 platforms. My journey started with a passion for financial markets, and today I help thousands of traders worldwide achieve their financial goals.\n\nMy goal is to show you how to learn and profit without falling into the traps of marketers, because this field has a lot of scams.\n\nI focus on accurate analysis, discipline, and achieving tangible results.',
     
     // Journey
     'journey.title': 'Trading Journey',
-    'journey.milestone1.title': 'Started Trading',
-    'journey.milestone1.desc': 'Began my journey in Forex markets',
-    'journey.milestone2.title': 'First Profitable Year',
-    'journey.milestone2.desc': 'Achieved consistent profitability',
-    'journey.milestone3.title': 'Launched Signals',
-    'journey.milestone3.desc': 'Started sharing trading signals',
-    'journey.milestone4.title': 'Community Growth',
-    'journey.milestone4.desc': 'Built a community of 200K+ traders',
+    'journey.milestone1.title': '2021 - The Beginning',
+    'journey.milestone1.desc': 'Started with all losses, zero experience',
+    'journey.milestone2.title': '2022 - Learning Phase',
+    'journey.milestone2.desc': 'Started learning and began earning',
+    'journey.milestone3.title': '2023 - Strategy Focus',
+    'journey.milestone3.desc': 'Focused on developing trading strategies',
+    'journey.milestone4.title': '2024 - Profit Phase',
+    'journey.milestone4.desc': 'Started gaining consistent profits',
+    'journey.milestone5.title': '2025 - Expert Level',
+    'journey.milestone5.desc': 'Understanding people and becoming an expert',
     
     // Stats
-    'stats.experience': 'Years Experience +5',
+    'stats.experience': 'Years Experience +3',
     'stats.community': '200K+ Community',
     'stats.volume': 'Trading Volume $1.2M',
     'stats.accuracy': 'Accuracy Rate 87%',
@@ -85,11 +87,12 @@ const translations = {
     'charts.live_indicator': 'Live Market Data',
     'charts.chart_title': 'Live TradingView Chart',
     'charts.live_data': 'Live Data',
+    'charts.disclaimer_label': 'Disclaimer:',
     'charts.disclaimer': 'Trading involves high risk and may result in loss of capital. Past performance does not guarantee future results. Always conduct your own research and consider your risk tolerance before making any investment decisions. Consult a financial advisor if necessary.',
     
     // About Highlights
     'about.mt4': 'MT4 & MT5 Expert',
-    'about.experience': 'Years Experience +5',
+    'about.experience': 'Years Experience +3',
     'about.accuracy': 'Accuracy Rate 87%',
     'about.community': '200K+ Community',
     
@@ -103,29 +106,37 @@ const translations = {
   },
   ar: {
     // Hero
-    'hero.title': 'مرحبا! أنا عبودي، متداول محترف بخبرة عملية',
-    'hero.subtitle': 'رح أعلمك كيف تتداول خطوة بخطوة بطريقة عملية وواقعية',
-    'hero.description': 'بدك تتعلم السكالبينج، إدارة الحسابات واستراتيجيات السوق؟ هون رح تحصل على المهارات اللي تخليك تتداول بثقة واحترافية',
-    'hero.cta1': 'شاهد صفقاتي',
+'hero.title': 'مرحباً! أنا عبودي — متداول محترف بخبرة عملية حقيقية',
+'hero.subtitle': 'متداول علمت نفسي خطوة بخطوة حتى صرت أحوّل السوق لصالحي',
+'hero.description': `
+رحلتي بدأت بالخسارة، لكني ما استسلمت.
+استثمرت وقتي وجهدي في التعلم والتجربة حتى وصلت للاحتراف في مجال التداول، وخاصة السكالبينج.
+
+من الخسارة إلى النجاح — قصة حقيقية عن الجهد، المثابرة، والتطور المستمر.
+تابعني لتتعلم كيف تربح بذكاء، وتتعامل مع السوق بثقة.
+`,
+'hero.cta1': 'شاهد صفقاتي',
     'hero.cta2': 'انضم للتيليجرام',
     
     // About
     'about.title': 'عني',
-    'about.description': 'مع أكثر من 5 سنوات من الخبرة في تداول الفوركس، أتخصص في استراتيجيات السكالبينج والتداول المتأرجح على منصات MT4 و MT5. بدأت رحلتي بشغف للأسواق المالية، واليوم أساعد الآلاف من المتداولين حول العالم على تحقيق أهدافهم المالية. تركيزنا رح يكون على التحليل الدقيق، الانضباط، وتحقيق نتائج ملموسة.',
+    'about.description': 'مع أكثر من 3 سنوات من الخبرة في تداول الفوركس، أتخصص في استراتيجيات السكالبينج والتداول المتأرجح على منصات MT4 و MT5. بدأت رحلتي بشغف للأسواق المالية، واليوم أساعد الآلاف من المتداولين حول العالم على تحقيق أهدافهم المالية.\n\nهدفي أفرجيك كيف تتعلم مع ربح بدون ما توقع بفخ المسوقين لان مجال في كتيير نصب.\n\nتركيزنا رح يكون على التحليل الدقيق، الانضباط، وتحقيق نتائج ملموسة.',
     
     // Journey
     'journey.title': 'رحلة التداول',
-    'journey.milestone1.title': 'بدأت التداول',
-    'journey.milestone1.desc': 'بدأت رحلتي في أسواق الفوركس',
-    'journey.milestone2.title': 'أول عام مربح',
-    'journey.milestone2.desc': 'حققت ربحية ثابتة',
-    'journey.milestone3.title': 'إطلاق الإشارات',
-    'journey.milestone3.desc': 'بدأت مشاركة إشارات التداول',
-    'journey.milestone4.title': 'نمو المجتمع',
-    'journey.milestone4.desc': 'بناء مجتمع من +200 ألف متداول',
+    'journey.milestone1.title': '2021 - البداية',
+    'journey.milestone1.desc': 'بدأت بكل الخسائر، صفر خبرة',
+    'journey.milestone2.title': '2022 - مرحلة التعلم',
+    'journey.milestone2.desc': 'بدأت التعلم وبدأت أربح',
+    'journey.milestone3.title': '2023 - التركيز على الاستراتيجيات',
+    'journey.milestone3.desc': 'ركزت على تطوير استراتيجيات التداول',
+    'journey.milestone4.title': '2024 - مرحلة الربح',
+    'journey.milestone4.desc': 'بدأت أحقق أرباح ثابتة',
+    'journey.milestone5.title': '2025 - مستوى الخبير',
+    'journey.milestone5.desc': 'فهم الناس وأصبحت خبير',
     
     // Stats
-    'stats.experience': 'سنوات الخبرة +5',
+    'stats.experience': 'سنوات الخبرة +3',
     'stats.community': 'متابعون +200 ألف',
     'stats.volume': 'حجم التداول 1.2 مليون دولار',
     'stats.accuracy': 'معدل الدقة 87%',
@@ -134,8 +145,8 @@ const translations = {
     'services.title': 'الخدمات والإرشاد',
     'services.signals.title': 'إشارات التداول',
     'services.signals.desc': 'إشارات تداول يومية مع نقاط الدخول ووقف الخسارة وجني الأرباح',
-    'services.mentorship.title': 'إرشاد فردي',
-    'services.mentorship.desc': 'تدريب شخصي لتحسين مهاراتك في التداول',
+    'services.mentorship.title': 'إرشادات التداول',
+    'services.mentorship.desc': 'أعلّمك الطريق الصحيح للتداول المربح، بدون ما تقع في فخ المسوّقين أو الدورات الوهمية',
     'services.account.title': 'إدارة الحسابات',
     'services.account.desc': 'إدارة احترافية لحسابات التداول الخاصة بك',
     'services.analysis.title': 'تحليل السوق',
@@ -176,11 +187,12 @@ const translations = {
     'charts.live_indicator': 'بيانات السوق المباشرة',
     'charts.chart_title': 'رسم بياني مباشر من TradingView',
     'charts.live_data': 'بيانات مباشرة',
+    'charts.disclaimer_label': 'إخلاء المسؤولية:',
     'charts.disclaimer': 'التداول ينطوي على مخاطر عالية وقد يؤدي إلى خسارة رأس المال. الأداء السابق لا يضمن النتائج المستقبلية. قم دائماً بأبحاثك الخاصة واعتبر تحملك للمخاطر قبل اتخاذ أي قرارات استثمارية. استشر مستشاراً مالياً إذا لزم الأمر.',
     
     // About Highlights
     'about.mt4': 'خبير MT4 و MT5',
-    'about.experience': 'سنوات الخبرة +5',
+    'about.experience': 'سنوات الخبرة +3',
     'about.accuracy': 'معدل الدقة 87%',
     'about.community': 'متابعون +200 ألف',
     

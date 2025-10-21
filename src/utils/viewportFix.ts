@@ -38,3 +38,4 @@ export const fixInitialMobileLoad = () => {
   document.body.classList.add('viewport-fixed');
 };
 
+

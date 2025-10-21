@@ -6,12 +6,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Instagram, Send, Youtube, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Send, Youtube, Twitter, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const ContactSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -36,10 +36,35 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create WhatsApp message based on language
+    let whatsappMessage = '';
+    if (language === 'ar') {
+      whatsappMessage = `مرحبا عبودي! أنا ${formData.name}، شفت موقعك وبدي أتعلم التداول.
+
+الاسم: ${formData.name}
+الإيميل: ${formData.email}
+الرسالة: ${formData.message}`;
+    } else {
+      whatsappMessage = `Hello Aboudy! I am ${formData.name}, I saw your website and I want to learn trading.
+
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}`;
+    }
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/009617002464?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
     toast({
       title: t('contact.success'),
-      description: 'I will get back to you soon!',
+      description: 'Redirecting to WhatsApp...',
     });
+    
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -87,8 +112,14 @@ export const ContactSection = () => {
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <MessageCircle className="w-5 h-5 text-primary" />
+                  <a href="https://wa.me/009617002464" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}>
+                    +961 70 024 64
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
-                  <a href="mailto:Gourmetmeal9@gmail.com" className="text-sm md:text-base">
+                  <a href="mailto:Gourmetmeal9@gmail.com" className="text-sm md:text-base" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}>
                     Gourmetmeal9@gmail.com
                   </a>
                 </div>
@@ -103,6 +134,11 @@ export const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground">{t('footer.follow')}</h3>
               <div className="flex gap-4">
+                <a href="https://www.tiktok.com/@aboudimustafa0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform" title="TikTok">
+                  <svg className="w-6 h-6 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                </a>
                 <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                   <Instagram className="w-6 h-6 text-primary-foreground" />
                 </a>

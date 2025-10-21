@@ -73,7 +73,7 @@ export const AboutSection = () => {
               </div>
               
               {/* Professional badge - better mobile positioning */}
-              <div className="absolute -bottom-20 sm:-bottom-20 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-6 py-3 sm:px-4 sm:py-4 rounded-full sm:text-base font-semibold shadow-lg group-hover:shadow-xl transition-all duration-1000 ease-out border-2 border-primary/20 text-xs">
+              <div className="absolute -bottom-20 sm:-bottom-20 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-6 py-3 sm:px-4 sm:py-4 rounded-full sm:text-base font-semibold shadow-lg group-hover:shadow-xl transition-all duration-1000 ease-out border-2 border-primary/20 text-xs whitespace-nowrap">
                 Professional Trader
               </div>
             </div>

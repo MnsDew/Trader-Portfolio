@@ -50,7 +50,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-16">
+    <section id="hero" ref={heroRef} className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-16">
       <ChartBackground />
       
       <div className="container mx-auto px-4 text-center relative z-10">

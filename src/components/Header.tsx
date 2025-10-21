@@ -42,8 +42,16 @@ export const Header = () => {
         : 'backdrop-blur-lg bg-background/80 border-b border-border'
     }`}>
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="text-2xl font-bold text-gradient-gold hover:scale-105 transition-transform duration-300 cursor-pointer">
-          FX Trader
+        <div 
+          className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onClick={() => scrollToSection('hero')}
+        >
+          <img 
+            src="/no-bg-gold.png" 
+            alt="Aboudy - Professional Forex Trader" 
+            className="h-12 w-10 object-contain"
+          />
+          <span className="text-lg font-bold text-gradient-gold">Aboudy</span>
         </div>
         
         {/* Desktop Navigation */}

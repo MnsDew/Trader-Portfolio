@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { TrendingUp, Target, Radio, Users } from 'lucide-react';
+import { TrendingUp, Target, Radio, Users, Award } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -12,10 +12,11 @@ export const JourneySection = () => {
   const timelinesRef = useRef<HTMLDivElement[]>([]);
 
   const milestones = [
-    { icon: TrendingUp, year: '2019', titleKey: 'journey.milestone1.title', descKey: 'journey.milestone1.desc' },
-    { icon: Target, year: '2020', titleKey: 'journey.milestone2.title', descKey: 'journey.milestone2.desc' },
-    { icon: Radio, year: '2022', titleKey: 'journey.milestone3.title', descKey: 'journey.milestone3.desc' },
+    { icon: TrendingUp, year: '2021', titleKey: 'journey.milestone1.title', descKey: 'journey.milestone1.desc' },
+    { icon: Target, year: '2022', titleKey: 'journey.milestone2.title', descKey: 'journey.milestone2.desc' },
+    { icon: Radio, year: '2023', titleKey: 'journey.milestone3.title', descKey: 'journey.milestone3.desc' },
     { icon: Users, year: '2024', titleKey: 'journey.milestone4.title', descKey: 'journey.milestone4.desc' },
+    { icon: Award, year: '2025', titleKey: 'journey.milestone5.title', descKey: 'journey.milestone5.desc' },
   ];
 
   useEffect(() => {
