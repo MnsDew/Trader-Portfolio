@@ -33,7 +33,7 @@ const translations = {
     'journey.milestone4.title': '2024 - Profit Phase',
     'journey.milestone4.desc': 'Started gaining consistent profits',
     'journey.milestone5.title': '2025 - Expert Level',
-    'journey.milestone5.desc': 'Understanding people and becoming an expert',
+    'journey.milestone5.desc': 'Managing wallet\'s risk with minimal loss and gaining large profits',
     
     // Stats
     'stats.experience': 'Years Experience +3',
@@ -133,7 +133,7 @@ const translations = {
     'journey.milestone4.title': '2024 - مرحلة الربح',
     'journey.milestone4.desc': 'بدأت أحقق أرباح ثابتة',
     'journey.milestone5.title': '2025 - مستوى الخبير',
-    'journey.milestone5.desc': 'فهم الناس وأصبحت خبير',
+    'journey.milestone5.desc': 'ادارة المحافظ بخطورة قليلة والربح بكميات كبيرة',
     
     // Stats
     'stats.experience': 'سنوات الخبرة +3',
