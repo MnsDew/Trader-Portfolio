@@ -143,7 +143,7 @@ export const ServicesSection = () => {
         {/* Horizontal Scrolling Video Loop */}
         <div className="mt-20 relative">
           <div className="overflow-hidden">
-            <div className="flex animate-scroll-horizontal" style={{ width: '200%' }}>
+            <div className="flex animate-scroll-horizontal" style={{ width: '400%' }}>
               {/* Video content that scrolls horizontally */}
               <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 rounded-2xl mx-4 flex items-center justify-center">
                 <div className="text-center">
@@ -175,6 +175,97 @@ export const ServicesSection = () => {
                   <p className="text-xs md:text-sm text-muted-foreground">Professional services</p>
                 </div>
               </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-pink-500/10 via-pink-500/20 to-pink-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-pink-600 mb-2">Forex Expert</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Expert guidance</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-cyan-500/10 via-cyan-500/20 to-cyan-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-cyan-600 mb-2">MT4/MT5</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Platform mastery</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-indigo-500/10 via-indigo-500/20 to-indigo-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-indigo-600 mb-2">Scalping</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Quick profits</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-yellow-500/10 via-yellow-500/20 to-yellow-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-yellow-600 mb-2">Swing Trading</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Long-term gains</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-red-500/10 via-red-500/20 to-red-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-2">News Trading</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Market events</p>
+                </div>
+              </div>
+              {/* Duplicate for seamless continuous flow */}
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">Live Trading Sessions</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Watch real-time trading analysis</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-blue-500/10 via-blue-500/20 to-blue-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-600 mb-2">Market Analysis</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Daily technical analysis</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-green-500/10 via-green-500/20 to-green-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-2">Trading Signals</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">87% accuracy rate</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-purple-500/10 via-purple-500/20 to-purple-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-purple-600 mb-2">Risk Management</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Position sizing strategies</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-orange-500/10 via-orange-500/20 to-orange-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-orange-600 mb-2">Portfolio Management</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Professional services</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-pink-500/10 via-pink-500/20 to-pink-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-pink-600 mb-2">Forex Expert</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Expert guidance</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-cyan-500/10 via-cyan-500/20 to-cyan-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-cyan-600 mb-2">MT4/MT5</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Platform mastery</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-indigo-500/10 via-indigo-500/20 to-indigo-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-indigo-600 mb-2">Scalping</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Quick profits</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-yellow-500/10 via-yellow-500/20 to-yellow-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-yellow-600 mb-2">Swing Trading</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Long-term gains</p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-80 h-32 md:h-40 bg-gradient-to-r from-red-500/10 via-red-500/20 to-red-500/10 rounded-2xl mx-4 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-2">News Trading</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">Market events</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -190,18 +281,17 @@ export const ServicesSection = () => {
           50% { transform: translateX(4px); }
         }
         @keyframes scroll-horizontal {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(100%); }
-          50% { transform: translateX(0%); }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
         }
         .animate-progress {
-          animation: progress 10s linear;
+          animation: progress 0s linear;
         }
         .animate-bounce-horizontal {
           animation: bounce-horizontal 1.5s ease-in-out infinite;
         }
         .animate-scroll-horizontal {
-            animation: scroll-horizontal 20s linear infinite;
+            animation: scroll-horizontal 30s linear infinite;
         }
       `}</style>
     </section>
