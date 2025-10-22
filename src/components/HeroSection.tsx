@@ -54,13 +54,13 @@ export const HeroSection = () => {
       <ChartBackground />
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 ref={titleRef} className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 text-gradient-gold pb-4 leading-tight">
+        <h1 ref={titleRef} className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 text-gradient-gold leading-tight pb-4">
           {t('hero.title')}
         </h1>
-        <p ref={subtitleRef} className="text-xl sm:text-2xl md:text-3xl mb-6 text-foreground leading-relaxed">
+        <p ref={subtitleRef} className="text-xl sm:text-2xl md:text-3xl mb-8 text-foreground leading-relaxed">
           {t('hero.subtitle')}
         </p>
-        <p ref={descRef} className="text-base sm:text-lg md:text-xl mb-10 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p ref={descRef} className="text-lg sm:text-lg md:text-xl mb-12 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           {t('hero.description')}
         </p>
         

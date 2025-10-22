@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ThemeProvider } from '@/contexts/ThemeContext';
+import { ThemeProvider, useTheme } from '@/contexts/ThemeContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Loader } from '@/components/Loader';
 import { Header } from '@/components/Header';
@@ -15,13 +15,29 @@ import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { SocialWidget } from '@/components/SocialWidget';
 
+// Component for dynamic theme meta tags
+const ThemeMetaTags = () => {
+  const { theme } = useTheme();
+  
+  // Dark mode: black bg with light text → use light theme color
+  // Light mode: light bg with dark text → use dark theme color
+  const themeColor = theme === 'dark' ? '#ffffff' : '#fbfafa';
+  
+  return (
+    <Helmet>
+      <meta name="theme-color" content={themeColor} />
+      <meta name="msapplication-TileColor" content={themeColor} />
+    </Helmet>
+  );
+};
+
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Aboudy",
     "jobTitle": "Professional Forex Trader",
-    "description": "Professional Forex Trader with 5+ years experience in MT4 & MT5 platforms, specializing in scalping and swing trading strategies",
+    "description": "Professional Forex Trader with 3+ years experience in MT4 & MT5 platforms, specializing in scalping and swing trading strategies",
     "url": "https://aboudy-trader.com",
     "sameAs": [
       "https://t.me/aboudy_trader",
@@ -69,13 +85,11 @@ const Index = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aboudy-trader.com" />
         <meta property="twitter:title" content="Aboudy - Professional Forex Trader | Expert Trading Signals" />
-        <meta property="twitter:description" content="Professional Forex Trader with 5+ years experience. Learn scalping, swing trading, and market strategies with expert guidance." />
+        <meta property="twitter:description" content="Professional Forex Trader with 3+ years experience. Learn scalping, swing trading, and market strategies with expert guidance." />
         <meta property="twitter:image" content="https://aboudy-trader.com/twitter-image.jpg" />
         
         {/* Additional SEO */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#D4AF37" />
-        <meta name="msapplication-TileColor" content="#D4AF37" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -85,6 +99,7 @@ const Index = () => {
       
       <ThemeProvider>
         <LanguageProvider>
+          <ThemeMetaTags />
           <Loader />
           <div className="min-h-screen bg-background">
             <Header />

@@ -26,6 +26,26 @@ const App = () => {
     }
   }, []);
 
+  // Function to detect user's preferred language
+  const detectUserLanguage = () => {
+    // Check if there's a server-side language preference
+    const initialLanguage = (window as any).__INITIAL_LANGUAGE__;
+    if (initialLanguage) {
+      return initialLanguage;
+    }
+
+    // Get browser language
+    const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+    
+    // Check if Arabic is preferred
+    if (browserLang.startsWith('ar')) {
+      return 'ar';
+    }
+    
+    // Default to English for all other languages
+    return 'en';
+  };
+
   return (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -34,8 +54,8 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* Redirect root to Arabic by default */}
-            <Route path="/" element={<Navigate to="/ar" replace />} />
+            {/* Redirect root to user's preferred language */}
+            <Route path="/" element={<Navigate to={`/${detectUserLanguage()}`} replace />} />
             {/* Arabic route */}
             <Route path="/ar" element={
               <LanguageRoute language="ar">
