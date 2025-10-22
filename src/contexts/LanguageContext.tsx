@@ -20,7 +20,19 @@ const translations = {
     
     // About
     'about.title': 'About Me',
-    'about.description': '3+ years of Forex trading experience specializing in scalping and swing trading on MT4/MT5. I help 200K+ traders worldwide with real strategies and honest guidance.\n\nMy focus: accurate analysis, risk management, and sustainable results. No false promises — just proven methods.',
+    'about.experience': '3+ years of Forex trading experience',
+    'about.specialization.title': 'I specialize in',
+    'about.specialization.scalping': 'Scalping and swing trading',
+    'about.specialization.platforms': 'MT4 and MT5 platforms',
+    'about.specialization.risk': 'Advanced risk management',
+    'about.community': 'I help 200K+ traders worldwide',
+    'about.focus.title': 'My main focus',
+    'about.focus.analysis': 'Accurate analysis',
+    'about.focus.management': 'Risk management',
+    'about.focus.results': 'Sustainable results',
+    'about.promise': 'No false promises — just proven methods',
+    'about.mt4': 'MT4 & MT5 Expert',
+    'about.accuracy': 'Accuracy Rate 87%',
     
     // Journey
     'journey.title': 'Trading Journey',
@@ -43,14 +55,19 @@ const translations = {
     
     // Services
     'services.title': 'Specialized Services & Mentorship',
+    'services.subtitle': 'Elevate your trading journey with professional guidance',
     'services.signals.title': 'Guaranteed Trading Signals',
     'services.signals.desc': 'Daily well-researched trading signals with precise entry points, stop-loss, and take-profit levels, 87% success rate',
-    'services.mentorship.title': 'Personalized Expert Mentorship',
-    'services.mentorship.desc': 'I teach you the right path to profitable and sustainable trading, without falling into the traps of marketers or fake courses. Learn from my real experience',
+    'services.signals.badge': 'Most Popular',
+    'services.trading.title': 'Investing or Trading for You',
+    'services.trading.desc': 'I teach you the right path to profitable and sustainable trading, without falling into the traps of marketers or fake courses. Learn from my real experience',
+    'services.trading.badge': 'Personalized',
     'services.account.title': 'Professional Portfolio Management',
     'services.account.desc': 'Professional and specialized management of your trading accounts with real guarantees and complete transparency',
+    'services.account.badge': 'Professional',
     'services.analysis.title': 'Advanced Technical Analysis',
     'services.analysis.desc': 'In-depth technical and fundamental market analysis with accurate predictions and profitable trading opportunities',
+    'services.analysis.badge': 'Daily Updates',
     
     // Gallery
     'gallery.title': 'Reels & Content',
@@ -91,10 +108,8 @@ const translations = {
     'charts.disclaimer': 'Trading involves high risk and may result in loss of capital. Past performance does not guarantee future results. Always conduct your own research and consider your risk tolerance before making any investment decisions. Consult a financial advisor if necessary.',
     
     // About Highlights
-    'about.mt4': 'MT4 & MT5 Expert',
-    'about.experience': 'Years Experience +3',
-    'about.accuracy': 'Accuracy Rate 87%',
-    'about.community': '200K+ Community',
+    'about.experience.short': 'Years Experience +3',
+    'about.community.short': '200K+ Community',
     
     // Navigation
     'nav.about': 'About',
@@ -114,7 +129,17 @@ const translations = {
     
     // About
     'about.title': 'عني',
-    'about.description': '3+ سنوات من الخبرة في تداول الفوركس، أتخصص في السكالبينج والتداول المتأرجح على MT4/MT5. أساعد 200 ألف+ متداول حول العالم باستراتيجيات حقيقية وإرشاد صادق.\n\nتركيزي: التحليل الدقيق، إدارة المخاطر، والنتائج المستدامة. لا وعود كاذبة — فقط طرق مثبتة.',
+    'about.experience': 'أكثر من 3 سنوات من الخبرة في تداول الفوركس',
+    'about.specialization.title': 'أتخصص في',
+    'about.specialization.scalping': 'السكالبينج والتداول المتأرجح',
+    'about.specialization.platforms': 'منصات MT4 و MT5',
+    'about.specialization.risk': 'إدارة المخاطر المتقدمة',
+    'about.community': 'أساعد 200 ألف+ متداول حول العالم',
+    'about.focus.title': 'تركيزي الأساسي',
+    'about.focus.analysis': 'التحليل الدقيق',
+    'about.focus.management': 'إدارة المخاطر',
+    'about.focus.results': 'النتائج المستدامة',
+    'about.promise': 'لا وعود كاذبة — فقط طرق مثبتة',
     
     // Journey
     'journey.title': 'رحلة التداول',
@@ -136,15 +161,20 @@ const translations = {
     'stats.accuracy': 'معدل الدقة 87%',
     
     // Services
-    'services.title': 'الخدمات والإرشاد المتخصص',
+    'services.title': 'الخدمات',
+    'services.subtitle': 'ارتق برحلة التداول الخاصة بك مع الإرشاد المهني',
     'services.signals.title': 'إشارات التداول المضمونة',
     'services.signals.desc': 'إشارات تداول يومية مدروسة مع نقاط الدخول الدقيقة ووقف الخسارة وجني الأرباح، معدل نجاح 87%',
-    'services.mentorship.title': 'الإرشاد الشخصي المتخصص',
-    'services.mentorship.desc': 'أعلمك الطريق الصحيح للتداول المربح والمستدام، بدون الوقوع في فخ المسوقين أو الدورات الوهمية. تعلم من تجربتي الحقيقية',
+    'services.signals.badge': 'الأكثر شعبية',
+    'services.trading.title': 'الاستثمار أو التداول لك',
+    'services.trading.desc': 'أعلمك الطريق الصحيح للتداول المربح والمستدام، بدون الوقوع في فخ المسوقين أو الدورات الوهمية. تعلم من تجربتي الحقيقية',
+    'services.trading.badge': 'شخصي',
     'services.account.title': 'إدارة المحافظ الاحترافية',
     'services.account.desc': 'إدارة احترافية ومتخصصة لحسابات التداول الخاصة بك مع ضمانات حقيقية وشفافية كاملة',
+    'services.account.badge': 'احترافي',
     'services.analysis.title': 'التحليل الفني المتقدم',
     'services.analysis.desc': 'تحليل فني وأساسي متعمق للسوق مع توقعات دقيقة وفرص تداول مربحة',
+    'services.analysis.badge': 'تحديثات يومية',
     
     // Gallery
     'gallery.title': 'الفيديوهات والمحتوى',
@@ -186,9 +216,9 @@ const translations = {
     
     // About Highlights
     'about.mt4': 'خبير MT4 و MT5',
-    'about.experience': 'سنوات الخبرة +3',
+    'about.experience.short': 'سنوات الخبرة +3',
     'about.accuracy': 'معدل الدقة 87%',
-    'about.community': 'متابعون +200 ألف',
+    'about.community.short': 'متابعون +200 ألف',
     
     // Navigation
     'nav.about': 'عني',
