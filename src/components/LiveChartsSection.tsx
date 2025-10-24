@@ -14,13 +14,33 @@ export const LiveChartsSection = () => {
   const TradingViewWidget = ({ symbol }: { symbol: string }) => {
     const widgetId = `tradingview_${symbol.replace('/', '')}`;
     
+    // Configure data source based on symbol - prioritize first/best sources from TradingView
+    const getSymbolWithSource = (symbol: string) => {
+      switch (symbol) {
+        case 'XAU/USD':
+          return 'OANDA:XAUUSD'; // OANDA is first/best for gold
+        case 'EUR/USD':
+          return 'EURUSD'; // Let TradingView auto-select the first/best source (Tickmill)
+        case 'GBP/USD':
+          return 'GBPUSD'; // Let TradingView auto-select the first/best source (FP Markets)
+        case 'USD/JPY':
+          return 'USDJPY'; // Let TradingView auto-select the first/best source (FXCM)
+        default:
+          // For any other symbol, try first/best source first, then OANDA as fallback
+          // This ensures we get the best first resource from TradingView's list
+          return symbol.replace('/', '');
+      }
+    };
+    
+    const symbolParam = getSymbolWithSource(symbol);
+    
     return (
       <div className="w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden bg-background">
         <iframe
           id={widgetId}
-          src={`https://www.tradingview.com/widgetembed/?frameElementId=${widgetId}&symbol=${symbol}&interval=1&hidesidetoolbar=false&saveimage=false&toolbarbg=1a1a1a&studies=%5B%5D&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=aboudy-trader.com&utm_medium=widget&utm_campaign=chart&utm_term=${symbol}&hide_top_toolbar=false&hide_legend=false&transparency=true&allow_symbol_change=true`}
+          src={`https://www.tradingview.com/widgetembed/?frameElementId=${widgetId}&symbol=${symbolParam}&interval=D&hidesidetoolbar=false&saveimage=false&toolbarbg=1a1a1a&studies=%5B%5D&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=aboudy-trader.com&utm_medium=widget&utm_campaign=chart&utm_term=${symbol}&hide_top_toolbar=false&hide_legend=false&transparency=true&allow_symbol_change=true&autosize=true&withdateranges=true&range=1M&calendar=true&hotlist=true&details=true&withvolume=true&showvolume=true`}
           className="w-full h-full border-0"
-          title={`Live ${symbol} Chart`}
+          title={`Live ${symbol} Chart - ${symbolParam}`}
           allow="clipboard-write"
           loading="lazy"
         />

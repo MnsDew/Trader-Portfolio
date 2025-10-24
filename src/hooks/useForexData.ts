@@ -16,8 +16,12 @@ export const useForexData = () => {
       setForexData(data);
       setLastUpdate(new Date());
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch forex data');
-      console.error('Error fetching forex data:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Failed to fetch real market data';
+      setError(errorMessage);
+      console.error('Error fetching real forex data:', err);
+      
+      // Clear any cached data if real data fails
+      setForexData([]);
     } finally {
       setLoading(false);
     }
@@ -31,10 +35,9 @@ export const useForexData = () => {
   useEffect(() => {
     fetchData();
     
-    // Set up auto-refresh every 30 seconds for optimal UX
-    const interval = setInterval(fetchData, 30000);
-    
-    return () => clearInterval(interval);
+    // Auto-refresh disabled - data will only refresh when manually triggered
+    // const interval = setInterval(fetchData, 30000);
+    // return () => clearInterval(interval);
   }, [fetchData]);
 
   return {
