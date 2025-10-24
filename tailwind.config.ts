@@ -107,6 +107,13 @@ export default {
         "gradient-gold": "var(--gradient-gold)",
         "gradient-card": "var(--gradient-card)",
       },
+      fontFamily: {
+        'advent': ['Advent Pro', 'sans-serif'],
+        'harmattan': ['Harmattan', 'sans-serif'],
+        'sans': ['Advent Pro', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'arabic': ['Harmattan', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'default': ['Advent Pro', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

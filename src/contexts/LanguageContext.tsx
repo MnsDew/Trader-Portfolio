@@ -12,7 +12,7 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Hero
-    'hero.title': 'Hello! I\'m Aboudi — Professional Forex Trader',
+    'hero.title': 'Hello! I\'m Aboudy — Professional Forex Trader',
     'hero.subtitle': 'Self-taught trader who turned the market to my advantage',
     'hero.description': 'From losses to success — 3+ years of real trading experience. I help thousands of traders worldwide with proven strategies and honest guidance.',
     'hero.cta1': 'Watch My Trades',

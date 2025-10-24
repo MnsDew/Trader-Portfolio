@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Advent Pro Font */
+@font-face {
+  font-family: 'Advent Pro';
+  src: url('/fonts/Advent Pro.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Harmattan Font for Arabic */
+@font-face {
+  font-family: 'Harmattan';
+  src: url('/fonts/Harmattan-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global font rules - Arabic gets Harmattan everywhere */
+[dir="rtl"],
+[lang="ar"],
+html[lang="ar"],
+body[lang="ar"] {
+  font-family: 'Harmattan', 'ui-sans-serif', 'system-ui', 'sans-serif' !important;
+}
+
+/* Global font rules - English gets Advent Pro everywhere */
+[dir="ltr"],
+[lang="en"],
+html[lang="en"],
+body[lang="en"] {
+  font-family: 'Advent Pro', 'ui-sans-serif', 'system-ui', 'sans-serif' !important;
+}
+
+/* Default font for the entire application */
+html, body {
+  font-family: 'Advent Pro', 'ui-sans-serif', 'system-ui', 'sans-serif';
+}
+
+/* Override for Arabic language */
+html[lang="ar"], body[lang="ar"] {
+  font-family: 'Harmattan', 'ui-sans-serif', 'system-ui', 'sans-serif' !important;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
