@@ -1,4 +1,4 @@
-import { Instagram, Send, Youtube, Twitter } from 'lucide-react';
+import { Instagram, Send, MessageCircle } from 'lucide-react';
 
 export const SocialWidget = () => {
   return (
@@ -15,32 +15,31 @@ export const SocialWidget = () => {
         </svg>
       </a>
       <a
-        href="#"
+        href="https://www.instagram.com/aboudyfx"
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
         aria-label="Instagram"
       >
         <Instagram className="w-5 h-5 text-primary-foreground" />
       </a>
       <a
-        href="#"
+        href="https://t.me/TOJ_5vYAaJiYTk5"
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
         aria-label="Telegram"
       >
         <Send className="w-5 h-5 text-primary-foreground" />
       </a>
       <a
-        href="#"
+        href="https://wa.me/966500395454"
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
-        aria-label="YouTube"
+        aria-label="WhatsApp"
       >
-        <Youtube className="w-5 h-5 text-primary-foreground" />
-      </a>
-      <a
-        href="#"
-        className="w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
-        aria-label="Twitter"
-      >
-        <Twitter className="w-5 h-5 text-primary-foreground" />
+        <MessageCircle className="w-5 h-5 text-primary-foreground" />
       </a>
     </div>
   );

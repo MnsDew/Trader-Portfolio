@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Instagram, Send, Youtube, Twitter, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Instagram, Send, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,13 +40,13 @@ export const ContactSection = () => {
     // Create WhatsApp message based on language
     let whatsappMessage = '';
     if (language === 'ar') {
-      whatsappMessage = `مرحبا عبودي! أنا ${formData.name}، شفت موقعك وبدي أتعلم التداول.
+      whatsappMessage = `مرحبا عبودي! أنا ${formData.name}، شفت موقعك وبدي أستفيد من خدماتك.
 
 الاسم: ${formData.name}
 الإيميل: ${formData.email}
 الرسالة: ${formData.message}`;
     } else {
-      whatsappMessage = `Hello Aboudy! I am ${formData.name}, I saw your website and I want to learn trading.
+      whatsappMessage = `Hello Aboudy! I am ${formData.name}, I saw your website and I want to benefit from your services.
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -55,7 +55,7 @@ Message: ${formData.message}`;
     
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/009617002464?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/966500395454?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -113,8 +113,8 @@ Message: ${formData.message}`;
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                   <MessageCircle className="w-5 h-5 text-primary" />
-                  <a href="https://wa.me/009617002464" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}>
-                    +961 70 024 64
+                  <a href="https://wa.me/966500395454" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}>
+                    +966 50 039 5454
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
@@ -139,17 +139,14 @@ Message: ${formData.message}`;
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                   </svg>
                 </a>
-                <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="https://www.instagram.com/aboudyfx" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                   <Instagram className="w-6 h-6 text-primary-foreground" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="https://t.me/TOJ_5vYAaJiYTk5" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                   <Send className="w-6 h-6 text-primary-foreground" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                  <Youtube className="w-6 h-6 text-primary-foreground" />
-                </a>
-                <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                  <Twitter className="w-6 h-6 text-primary-foreground" />
+                <a href="https://wa.me/966500395454" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform" title="WhatsApp">
+                  <MessageCircle className="w-6 h-6 text-primary-foreground" />
                 </a>
               </div>
             </div>
